@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
-   <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>PlanetaryDrilling</defName>
     <label>planetary drilling</label>
     <description>Enables the construction of Planetary Drills.</description>
@@ -10,12 +9,11 @@
     <prerequisites>
       <li>DeepDrilling</li>
     </prerequisites>
-	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <researchViewX>17</researchViewX>
     <researchViewY>9</researchViewY>
   </ResearchProjectDef>
-  
 </Defs>

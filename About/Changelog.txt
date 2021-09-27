@@ -1,0 +1,4 @@
+# Changelog for PlanetaryDrill
+
+1.0.1.0 - Fixed some language issues
+
