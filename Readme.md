@@ -4,6 +4,7 @@
 
 Update of Squirting Elephants mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2010740880
+with permission
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QXBRYgksZjztZR20ip9KBmHysQrfyEZuthkGOx73txHnT888xb6RWSSQP55NcO362yYqeRp/MpvcQTplpMJfGA==",
+  "dgSpecHash": "VepFQXdSet/KqEz6LgLm1mRMDVZu9dyunzvsyxVs8XgoqOCpeOfa0lARVtXfps4b/MdUycq2fkJzZQ6fNO2R3w==",
   "success": true,
   "projectFilePath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\PlanetaryDrill\\Source\\PlanetaryDrill\\PlanetaryDrill.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\inade\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3117\\krafs.rimworld.ref.1.3.3117.nupkg.sha512"
+    "C:\\Users\\inade\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3326\\krafs.rimworld.ref.1.3.3326.nupkg.sha512"
   ],
   "logs": []
 }
