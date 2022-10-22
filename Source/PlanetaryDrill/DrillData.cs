@@ -113,12 +113,12 @@ public class DrillData : IExposable
             workSkill = DefDatabase<SkillDef>.GetNamed("Mining"),
             workSpeedStat = DefDatabase<StatDef>.GetNamed("MiningSpeed"),
             workSkillLearnFactor = 0.5f,
-            jobString = $"Drilling {ThingDefToDrill.label}",
+            jobString = "SEPD_DrillingInfo".Translate(ThingDefToDrill.label),
             workAmount = WorkAmount,
             ingredients = new List<IngredientCount>(),
             soundWorking = DefDatabase<SoundDef>.GetNamed("Recipe_Machining"),
-            label = $"Drill {ThingDefToDrill.label}", // TODO: translate this.
-            description = $"Drill {ThingDefToDrill.label}", // TODO: translate this.
+            label = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),
+            description = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),
             products = CreateProducts()
         };
 

@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {
-      "Krafs.Rimworld.Ref/1.3.3326": {
+    ".NETFramework,Version=v4.8": {
+      "Krafs.Rimworld.Ref/1.4.3524": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -85,20 +85,33 @@
           "ref/net472/com.rlabrecque.steamworks.net.dll": {},
           "ref/net472/mscorlib.dll": {}
         }
+      },
+      "Mlie_Rimworld_VersionFromManifest/2022.10.8.223337": {
+        "type": "package",
+        "dependencies": {
+          "Krafs.Rimworld.Ref": "1.4.3510-beta"
+        },
+        "compile": {
+          "lib/net472/VersionFromManifest.dll": {}
+        },
+        "runtime": {
+          "lib/net472/VersionFromManifest.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Krafs.Rimworld.Ref/1.3.3326": {
-      "sha512": "Uq0p4fn3xl4ta6hWsBwG4ylpIuOJw4o1QfgG5/UbiQ9Az7mqvHTR/5awWxZDyzO1/e0dCaH0PhiDHGpIqLdHpg==",
+    "Krafs.Rimworld.Ref/1.4.3524": {
+      "sha512": "tjYgMhTgH4f3FALqGnE1vpImxwQCrZVBTY/kJQH4iUzyVda8m8k3OO10CT1gmjTrMXNyXMMQaUrU/EUJhMR9NA==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.3.3326",
+      "path": "krafs.rimworld.ref/1.4.3524",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.txt",
+        "LICENSE.md",
+        "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.3.3326.nupkg.sha512",
+        "krafs.rimworld.ref.1.4.3524.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -180,11 +193,25 @@
         "ref/net472/com.rlabrecque.steamworks.net.dll",
         "ref/net472/mscorlib.dll"
       ]
+    },
+    "Mlie_Rimworld_VersionFromManifest/2022.10.8.223337": {
+      "sha512": "hXvJIkb4d86TiTyIaLl3UJ7JYIBZMY/UDPPqKmnuRn8BJmdKdIOUl+Pv7TmYG0hnhkF2CguiGKUPSF9BCuoAXg==",
+      "type": "package",
+      "path": "mlie_rimworld_versionfrommanifest/2022.10.8.223337",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/VersionFromManifest.dll",
+        "mlie_rimworld_versionfrommanifest.2022.10.8.223337.nupkg.sha512",
+        "mlie_rimworld_versionfrommanifest.nuspec",
+        "readme.md"
+      ]
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": [
-      "Krafs.Rimworld.Ref >= *"
+    ".NETFramework,Version=v4.8": [
+      "Krafs.Rimworld.Ref >= *",
+      "Mlie_Rimworld_VersionFromManifest >= *"
     ]
   },
   "packageFolders": {
@@ -209,15 +236,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net472"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net472": {
-          "targetAlias": "net472",
+        "net48": {
+          "targetAlias": "net48",
           "projectReferences": {}
         }
       },
@@ -228,16 +255,20 @@
       }
     },
     "frameworks": {
-      "net472": {
-        "targetAlias": "net472",
+      "net48": {
+        "targetAlias": "net48",
         "dependencies": {
           "Krafs.Rimworld.Ref": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[*, )"
+          },
+          "Mlie_Rimworld_VersionFromManifest": {
+            "target": "Package",
+            "version": "[*, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

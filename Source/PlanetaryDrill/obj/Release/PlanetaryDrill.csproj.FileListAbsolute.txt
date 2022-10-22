@@ -5,3 +5,5 @@ E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDr
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDrill\obj\Release\PlanetaryDrill.csproj.AssemblyReference.cache
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDrill\obj\Release\PlanetaryDrill.AssemblyInfoInputs.cache
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDrill\obj\Release\PlanetaryDrill.AssemblyInfo.cs
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\1.4\Assemblies\PlanetaryDrill.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDrill\obj\Release\PlanetaryDrill.csproj.CopyComplete

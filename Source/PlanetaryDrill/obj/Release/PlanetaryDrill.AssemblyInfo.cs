@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanetaryDrill")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.3.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.4.1")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanetaryDrill")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanetaryDrill")]

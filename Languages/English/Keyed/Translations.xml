@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <SEPD_ModName>Planetary Drill</SEPD_ModName>
+  <SEPD_DrillInfo>Drill {0}</SEPD_DrillInfo>
+  <SEPD_DrillingInfo>Drilling {0}</SEPD_DrillingInfo>
+  <SEPD_ModVersion>Installed mod-version: {0}</SEPD_ModVersion>
   <!-- Settings -->
   <SEPD_SettingsCategory>Planetary Drill</SEPD_SettingsCategory>
   <SEPD_DrillSteelCost>steel cost</SEPD_DrillSteelCost>

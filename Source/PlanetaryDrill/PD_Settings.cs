@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using System.Reflection;
+using Mlie;
 using RimWorld;
 using SquirtingElephant.Helpers;
 using UnityEngine;
@@ -24,11 +26,15 @@ public class PD_Settings : Mod
         new[] { 225f, 200f, 200f },
         new[] { ROW_HEIGHT });
 
+    private static string currentVersion;
+
     private Vector2 _scrollPosition = Vector2.zero;
 
     public PD_Settings(ModContentPack content) : base(content)
     {
         Settings = GetSettings<SettingsData>();
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.PlanetaryDrill"));
     }
 
     private float GetScrollViewHeight()
@@ -40,6 +46,15 @@ public class PD_Settings : Mod
     {
         var ls = new Listing_Standard();
         ls.Begin(inRect);
+        if (currentVersion != null)
+        {
+            ls.Gap();
+            ls.Gap();
+            ls.Gap();
+            GUI.contentColor = Color.gray;
+            ls.Label("SEPD_ModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
+        }
 
         SettingsRenderer.CreateRegularSettings(ls, Settings);
         SettingsRenderer.CreateOpenConfigFolderButton(BUTTON_HEIGHT);
@@ -78,6 +93,7 @@ public class PD_Settings : Mod
         ls.GetRect(Table.TableRect.height);
 
         Widgets.EndScrollView();
+
         ls.End();
         ApplySettingsToDefs();
 
@@ -98,8 +114,11 @@ public class PD_Settings : Mod
         var dds = Settings.Drillables.Values.Select(dd => dd.CreateDrillRecipe());
         planetaryDrillDef.recipes = dds.ToList();
 
-        planetaryDrillDef.comps.OfType<CompProperties_Power>().First().basePowerConsumption =
-            Settings.DrillPowerConsumption;
+        var fieldInfo =
+            typeof(CompProperties_Power).GetField("basePowerConsumption",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+        fieldInfo?.SetValue(planetaryDrillDef.comps.OfType<CompProperties_Power>().First(),
+            Settings.DrillPowerConsumption);
     }
 
     public static void RemoveInvalidSettings()

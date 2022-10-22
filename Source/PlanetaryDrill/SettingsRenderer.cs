@@ -110,16 +110,14 @@ public class SettingsRenderer
             return;
         }
 
-        {
-            Find.WindowStack.Add(new FloatMenu(
-                Mineables.AllMineables
-                    .Where(settings.CanItemBeDrilledAccordingToSettings)
-                    .Except(settings.Drillables.Values.Select(d =>
-                        d.ThingDefToDrill)) // Don't display items that were already added.
-                    .Select(m => new FloatMenuOption(m.label,
-                        () => settings.Drillables.Add(m.defName, new DrillData(m.defName, 1000)), m))
-                    .ToList()));
-        }
+        Find.WindowStack.Add(new FloatMenu(
+            Mineables.AllMineables
+                .Where(settings.CanItemBeDrilledAccordingToSettings)
+                .Except(settings.Drillables.Values.Select(d =>
+                    d.ThingDefToDrill)) // Don't display items that were already added.
+                .Select(m => new FloatMenuOption(m.label,
+                    () => settings.Drillables.Add(m.defName, new DrillData(m.defName, 1000)), m))
+                .ToList()));
     }
 
     private static void CreateRemoveDrillableButton(Rect inRect, ref TableData tableData, SettingsData settings)
