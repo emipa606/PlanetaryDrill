@@ -74,16 +74,11 @@ public static class Extensions
     }
 }
 
-public abstract class TableEntity
+public abstract class TableEntity(TableData tableData)
 {
-    protected readonly TableData TableData;
+    protected readonly TableData TableData = tableData;
 
     public string Name = string.Empty;
-
-    public TableEntity(TableData tableData)
-    {
-        TableData = tableData;
-    }
 
     /// <summary>
     ///     Please do not edit this outside of TableData. This value is calculated.
@@ -133,7 +128,7 @@ public class TableRow : TableEntity
         SetFields(tableData);
     }
 
-    public List<TableField> Fields { get; set; } = new List<TableField>();
+    public List<TableField> Fields { get; } = [];
 
     public float Height
     {
@@ -204,7 +199,7 @@ public class TableData
     /// </summary>
     private bool PrivateUpdateEnabled = true;
 
-    public bool UpdateEnabled = true;
+    public readonly bool UpdateEnabled = true;
 
     /// <summary>
     /// </summary>
@@ -255,9 +250,9 @@ public class TableData
     /// <summary>
     ///     Column Datas.
     /// </summary>
-    public List<TableColumn> Columns { get; set; } = new List<TableColumn>();
+    public List<TableColumn> Columns { get; } = [];
 
-    public List<TableRow> Rows { get; set; } = new List<TableRow>();
+    public List<TableRow> Rows { get; } = [];
 
     public Rect TableRect { get; private set; } = Rect.zero;
 

@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = PlanetaryDrill
 build_property.ProjectDir = E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source\PlanetaryDrill\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

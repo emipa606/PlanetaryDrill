@@ -5,7 +5,8 @@ using Verse;
 
 namespace SquirtingElephant.PlanetaryDrill;
 
-public class DrillData : IExposable
+public class DrillData(string thingDefToDrillName, int workAmount = 1, int yieldAmount = 1)
+    : IExposable
 {
     private const int MAX_ITEM_SPAWN_COUNT = (3 /* pi */ * 12 * 12 /* radius² */ * 2) - 16;
 
@@ -16,21 +17,14 @@ public class DrillData : IExposable
     /// <summary>
     ///     For the love of god, never change this value after _ThingDefToDrill has been set.
     /// </summary>
-    private string ThingDefToDrillName;
+    private string ThingDefToDrillName = thingDefToDrillName;
 
-    public int WorkAmount;
+    public int WorkAmount = workAmount;
 
     /// <summary>
     ///     How many ores are dug up each time.
     /// </summary>
-    public int YieldAmount;
-
-    public DrillData(string thingDefToDrillName, int workAmount = 1, int yieldAmount = 1)
-    {
-        ThingDefToDrillName = thingDefToDrillName;
-        WorkAmount = workAmount;
-        YieldAmount = yieldAmount;
-    }
+    public int YieldAmount = yieldAmount;
 
     public ThingDef ThingDefToDrill
     {
@@ -100,7 +94,7 @@ public class DrillData : IExposable
 
     private List<ThingDefCountClass> CreateProducts()
     {
-        return new List<ThingDefCountClass> { new ThingDefCountClass(ThingDefToDrill, YieldAmount) };
+        return [new ThingDefCountClass(ThingDefToDrill, YieldAmount)];
     }
 
     private RecipeDef CreateDrillRecipeDef()
@@ -115,7 +109,7 @@ public class DrillData : IExposable
             workSkillLearnFactor = 0.5f,
             jobString = "SEPD_DrillingInfo".Translate(ThingDefToDrill.label),
             workAmount = WorkAmount,
-            ingredients = new List<IngredientCount>(),
+            ingredients = [],
             soundWorking = DefDatabase<SoundDef>.GetNamed("Recipe_Machining"),
             label = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),
             description = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),

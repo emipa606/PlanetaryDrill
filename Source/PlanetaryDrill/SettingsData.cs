@@ -11,7 +11,7 @@ public class SettingsData : ModSettings
     /// <summary>
     ///     Contains everything that the drill is allowed to drill.
     /// </summary>
-    public Dictionary<string, DrillData> Drillables = new Dictionary<string, DrillData>();
+    public readonly Dictionary<string, DrillData> Drillables = new Dictionary<string, DrillData>();
 
     public int DrillPowerConsumption = 5000;
     public int DrillResearchCost = 17500;

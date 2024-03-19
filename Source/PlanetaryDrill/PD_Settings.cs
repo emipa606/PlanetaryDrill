@@ -23,8 +23,8 @@ public class PD_Settings : Mod
 
     public static TableData Table = new TableData(
         new Vector2(10f, 0f), new Vector2(10f, 10f),
-        new[] { 225f, 200f, 200f },
-        new[] { ROW_HEIGHT });
+        [225f, 200f, 200f],
+        [ROW_HEIGHT]);
 
     private static string currentVersion;
 
@@ -34,7 +34,7 @@ public class PD_Settings : Mod
     {
         Settings = GetSettings<SettingsData>();
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.PlanetaryDrill"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     private float GetScrollViewHeight()
