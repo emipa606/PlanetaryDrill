@@ -5,6 +5,7 @@
     <exclude>E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\.git</exclude>
     <exclude>E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\.gitmodules</exclude>
     <exclude>E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\.gitattributes</exclude>
+    <exclude>E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\.github</exclude>
     <exclude>E:\SteamLibrary\steamapps\common\RimWorld\Mods\PlanetaryDrill\Source</exclude>
   </Excluded>
 </Configuration>

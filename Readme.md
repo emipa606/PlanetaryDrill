@@ -1,4 +1,4 @@
-# PlanetaryDrill
+# [Planetary Drill (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2612772586)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -7,11 +7,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010740880
 with permission
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
-Ever wanted to [u]**drill ALL items that exist in the game**[/u], including items added by other mods? Now you can! Want to drill beer or corpses or explosives? You can!
+Ever wanted to <ins>**drill ALL items that exist in the game**</ins>, including items added by other mods? Now you can! Want to drill beer or corpses or explosives? You can!
 
 This version also comes with an extensive dynamic settings menu so you can balance your own gameplay.
 
@@ -32,15 +31,15 @@ This version also comes with an extensive dynamic settings menu so you can balan
 
 # Troubleshooting:
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=2046475282]Basic trouble shooting guide (click here).
-Please at least give me an error log (post it on pastebin.com]pastebin or something) if you have any kind of error and also check your warnings. Too many players who have a large amount of terribly-coded-mods that cause problems and because they crash (internally), my code doesn't get executed. This is NOT a compatibility problem either.
+[Basic trouble shooting guide (click here).](https://steamcommunity.com/sharedfiles/filedetails/?id=2046475282)
+Please at least give me an error log (post it on [pastebin](pastebin.com) or something) if you have any kind of error and also check your warnings. Too many players who have a large amount of terribly-coded-mods that cause problems and because they crash (internally), my code doesn't get executed. This is NOT a compatibility problem either.
 
 # Supported mods:
 
 
 
-- https://steamcommunity.com/sharedfiles/filedetails/?id=725576127&amp;searchtext=glitterworld+tech]Glitter Tech
-- https://steamcommunity.com/sharedfiles/filedetails/?id=747645520]Misc Robots++
+- [Glitter Tech](https://steamcommunity.com/sharedfiles/filedetails/?id=725576127&amp;searchtext=glitterworld+tech)
+- [Misc Robots++](https://steamcommunity.com/sharedfiles/filedetails/?id=747645520)
 -  And many more.
 
 
@@ -71,13 +70,12 @@ A: This drill can literally drill every item in existence. I filtered some unusa
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2612772586]![Image](https://img.shields.io/github/v/release/emipa606/PlanetaryDrill?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/PlanetaryDrill?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2612772586)

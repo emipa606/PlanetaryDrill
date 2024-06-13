@@ -10,6 +10,7 @@
     <rotatable>true</rotatable>
     <fillPercent>0.75</fillPercent>
     <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <blockWind>true</blockWind>
     <statBases>
       <MaxHitPoints>600</MaxHitPoints>
