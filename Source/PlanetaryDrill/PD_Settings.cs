@@ -113,7 +113,7 @@ public class PD_Settings : Mod
         Utils.SetThingSteelCost("SE_PlanetaryDrill", Settings.DrillSteelCost);
         var dds = Settings.Drillables.Values.Select(dd => dd.CreateDrillRecipe());
         planetaryDrillDef.recipes = dds.ToList();
-
+        planetaryDrillDef.allRecipesCached = null;
         var fieldInfo =
             typeof(CompProperties_Power).GetField("basePowerConsumption",
                 BindingFlags.Instance | BindingFlags.NonPublic);

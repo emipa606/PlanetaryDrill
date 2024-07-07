@@ -658,7 +658,7 @@ public static class Utils
     {
         if (Current.Game == null || Current.Game.CurrentMap == null)
         {
-            return Enumerable.Empty<Building>();
+            return [];
         }
 
         return Current.Game.CurrentMap.listerBuildings.allBuildingsColonist.Where(b => b.def.defName == defName);

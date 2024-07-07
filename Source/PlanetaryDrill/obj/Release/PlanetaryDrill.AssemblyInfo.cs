@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("Assembly-CSharp")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanetaryDrill")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.5.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fafd75e042d53124a62d79a8bd219835c3396af")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.5.2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36fd19d1b5ece2fd3facab9a49a1d0aa95d49944")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanetaryDrill")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanetaryDrill")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

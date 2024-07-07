@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uRMnGWEnZadA3Ke/dIe8t50AWJiIzum0/BNTtDid/71Ww2ZD8f/zMFK6w0pV/Ifl2gcNyRXvLFMZZkrJMp8zWw==",
+  "dgSpecHash": "h2BgSDaWE7U=",
   "success": true,
   "projectFilePath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\PlanetaryDrill\\Source\\PlanetaryDrill\\PlanetaryDrill.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\inade\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4039-beta\\krafs.rimworld.ref.1.5.4039-beta.nupkg.sha512",
+    "C:\\Users\\inade\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
+    "C:\\Users\\inade\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4104\\krafs.rimworld.ref.1.5.4104.nupkg.sha512",
     "C:\\Users\\inade\\.nuget\\packages\\mlie_rimworld_versionfrommanifest\\2022.10.8.223337\\mlie_rimworld_versionfrommanifest.2022.10.8.223337.nupkg.sha512"
   ],
   "logs": []

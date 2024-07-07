@@ -1,5 +1,8 @@
 # Changelog for PlanetaryDrill
 
+1.5.2 - Should work better with mods that lists all recipies for buildings in their initialization, for example Alpha Implants
+
+
 1.5.1 - Fixed warning about shot over warning
 
 
