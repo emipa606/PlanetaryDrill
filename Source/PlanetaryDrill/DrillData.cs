@@ -30,17 +30,9 @@ public class DrillData(string thingDefToDrillName, int workAmount = 1, int yield
     {
         get
         {
-            if (_ThingDefToDrill == null)
-            {
-                _ThingDefToDrill = Utils.GetDefByDefName<ThingDef>(ThingDefToDrillName);
-            }
+            _ThingDefToDrill ??= Utils.GetDefByDefName<ThingDef>(ThingDefToDrillName);
 
             return _ThingDefToDrill;
-        }
-        set
-        {
-            _ThingDefToDrill = value;
-            ThingDefToDrillName = value?.defName;
         }
     }
 
@@ -61,11 +53,11 @@ public class DrillData(string thingDefToDrillName, int workAmount = 1, int yield
 
     public void ExposeData()
     {
-        Scribe_Values.Look(ref ThingDefToDrillName, $"{Constants.SETTINGS_PREFIX}{ThingDefToDrillName}_DefName",
+        Scribe_Values.Look(ref ThingDefToDrillName, $"{Constants.SettingsPrefix}{ThingDefToDrillName}_DefName",
             ThingDefToDrillName, true);
-        Scribe_Values.Look(ref WorkAmount, $"{Constants.SETTINGS_PREFIX}{ThingDefToDrillName}_WorkAmount",
+        Scribe_Values.Look(ref WorkAmount, $"{Constants.SettingsPrefix}{ThingDefToDrillName}_WorkAmount",
             WorkAmount, true);
-        Scribe_Values.Look(ref YieldAmount, $"{Constants.SETTINGS_PREFIX}{ThingDefToDrillName}_DrillAmount",
+        Scribe_Values.Look(ref YieldAmount, $"{Constants.SettingsPrefix}{ThingDefToDrillName}_DrillAmount",
             YieldAmount, true);
     }
 
@@ -75,13 +67,13 @@ public class DrillData(string thingDefToDrillName, int workAmount = 1, int yield
         var drillRecipe = DefDatabase<RecipeDef>.GetNamed(recipeDefName, false);
         if (drillRecipe == null)
         {
-            drillRecipe = CreateDrillRecipeDef();
+            drillRecipe = createDrillRecipeDef();
             DefDatabase<RecipeDef>.Add(drillRecipe);
         }
         else
         {
             drillRecipe.workAmount = WorkAmount;
-            drillRecipe.products = CreateProducts();
+            drillRecipe.products = createProducts();
         }
 
         return drillRecipe;
@@ -92,12 +84,12 @@ public class DrillData(string thingDefToDrillName, int workAmount = 1, int yield
         return Utils.DefExistsByDefName<ThingDef>(ThingDefToDrillName);
     }
 
-    private List<ThingDefCountClass> CreateProducts()
+    private List<ThingDefCountClass> createProducts()
     {
         return [new ThingDefCountClass(ThingDefToDrill, YieldAmount)];
     }
 
-    private RecipeDef CreateDrillRecipeDef()
+    private RecipeDef createDrillRecipeDef()
     {
         var rd = new RecipeDef
         {
@@ -113,7 +105,7 @@ public class DrillData(string thingDefToDrillName, int workAmount = 1, int yield
             soundWorking = DefDatabase<SoundDef>.GetNamed("Recipe_Machining"),
             label = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),
             description = "SEPD_DrillInfo".Translate(ThingDefToDrill.label),
-            products = CreateProducts()
+            products = createProducts()
         };
 
         return rd;

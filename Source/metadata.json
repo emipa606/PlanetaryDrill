@@ -2,10 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5",
+  "PreviewVersion": "1.6",
   "SocialImageSet": true,
   "SearchTags": [
     "drill",
     " mining"
-  ]
+  ],
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 35885,
+  "LinesOfXML": 3855,
+  "CodeBaseSize": 74,
+  "LastXmlCleaning": "2025-07-22T20:38:44.7591989+02:00"
 }

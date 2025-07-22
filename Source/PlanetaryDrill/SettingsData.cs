@@ -11,7 +11,7 @@ public class SettingsData : ModSettings
     /// <summary>
     ///     Contains everything that the drill is allowed to drill.
     /// </summary>
-    public readonly Dictionary<string, DrillData> Drillables = new Dictionary<string, DrillData>();
+    public readonly Dictionary<string, DrillData> Drillables = new();
 
     public int DrillPowerConsumption = 5000;
     public int DrillResearchCost = 17500;
@@ -65,17 +65,17 @@ public class SettingsData : ModSettings
     {
         Drillables.Clear();
 
-        AddDefaultDrillable("ChunkGranite", 250, 1);
-        AddDefaultDrillable("Steel", 5750, 35);
-        AddDefaultDrillable("Plasteel", 11500, 35);
-        AddDefaultDrillable("Jade", 6500, 20);
-        AddDefaultDrillable("Uranium", 7000, 20);
-        AddDefaultDrillable("Gold", 7250, 15);
+        addDefaultDrillable("ChunkGranite", Constants.ChunkWorkAmount, 1);
+        addDefaultDrillable("Steel", 5750, 35);
+        addDefaultDrillable("Plasteel", 11500, 35);
+        addDefaultDrillable("Jade", 6500, 20);
+        addDefaultDrillable("Uranium", 7000, 20);
+        addDefaultDrillable("Gold", 7250, 15);
 
         PD_Settings.ApplySettingsToDefs();
     }
 
-    private void AddDefaultDrillable(string thingDefName, int workAmount, int yieldAmount)
+    private void addDefaultDrillable(string thingDefName, int workAmount, int yieldAmount)
     {
         if (Utils.GetDefByDefName<ThingDef>(thingDefName, false) != null)
         {

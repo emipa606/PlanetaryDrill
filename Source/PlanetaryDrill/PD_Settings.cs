@@ -21,7 +21,7 @@ public class PD_Settings : Mod
     private const float SCROLL_VIEW_PADDING_HORIZONTAL = 10f;
     public static SettingsData Settings;
 
-    public static TableData Table = new TableData(
+    private static TableData Table = new(
         new Vector2(10f, 0f), new Vector2(10f, 10f),
         [225f, 200f, 200f],
         [ROW_HEIGHT]);
@@ -37,7 +37,7 @@ public class PD_Settings : Mod
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
-    private float GetScrollViewHeight()
+    private static float getScrollViewHeight()
     {
         return (Settings.Drillables.Values.Count + 2) * (ROW_HEIGHT + ROW_PADDING);
     }
@@ -67,25 +67,24 @@ public class PD_Settings : Mod
             inRect.x + SCROLL_VIEW_PADDING_HORIZONTAL,
             inRect.y,
             inRect.width - (2 * SCROLL_VIEW_PADDING_HORIZONTAL),
-            GetScrollViewHeight());
+            getScrollViewHeight());
         Widgets.BeginScrollView(
             new Rect(0, drillableScrollStartY, inRect.width, inRect.height - drillableScrollStartY - ROW_HEIGHT),
             ref _scrollPosition, scrollViewRect);
         SettingsRenderer.CreateDrillableHeaders(Table);
 
         var rowIdx = 2;
-        foreach (var kvp in Settings.Drillables)
+        foreach (var (key, drillData) in Settings.Drillables)
         {
-            var dd = kvp.Value;
-            if (dd == null)
+            if (drillData == null)
             {
-                Settings.Drillables.Remove(kvp.Key);
+                Settings.Drillables.Remove(key);
                 Debug.LogWarning(
-                    $"Planetary Drill: Removed drillable \"{kvp.Key}\" because it no longer exists (did you remove the mod or did it update?).");
+                    $"Planetary Drill: Removed drillable \"{key}\" because it no longer exists (did you remove the mod or did it update?).");
             }
             else
             {
-                SettingsRenderer.CreateDrillableSettingsFields(dd, rowIdx++, ref Table, ICON_SIZE,
+                SettingsRenderer.CreateDrillableSettingsFields(drillData, rowIdx++, ref Table, ICON_SIZE,
                     NUMERIC_INPUT_WIDTH, WORK_AMOUNT_MIN, WORK_AMOUNT_MAX, YIELD_AMOUNT_MIN);
             }
         }

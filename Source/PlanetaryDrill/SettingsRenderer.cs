@@ -29,9 +29,9 @@ public class SettingsRenderer
 
     public static void CreateOpenConfigFolderButton(float buttonHeight)
     {
-        var modconfigFolderPath = Utils.GetModSettingsFolderPath();
+        var configFolderPath = Utils.GetModSettingsFolderPath();
         if (Widgets.ButtonText(new Rect(0, 5, 200, buttonHeight),
-                "SEPD_OpenConfigFolder".Translate().CapitalizeFirst(), active: Directory.Exists(modconfigFolderPath)))
+                "SEPD_OpenConfigFolder".Translate().CapitalizeFirst(), active: Directory.Exists(configFolderPath)))
         {
             Utils.OpenModSettingsFolder();
         }
@@ -43,7 +43,7 @@ public class SettingsRenderer
         Widgets.Label(rowRect, "SEPD_RebootMessage".Translate().CapitalizeFirst());
     }
 
-    private static Rect GetSliderField(int colIdx, int rowIdx, TableData tableData, float numericInputWidth)
+    private static Rect getSliderField(int colIdx, int rowIdx, TableData tableData, float numericInputWidth)
     {
         var field = tableData.GetFieldRect(colIdx, rowIdx);
         return new Rect(field.x + numericInputWidth + 2, field.y, field.width - numericInputWidth - 2,
@@ -64,7 +64,7 @@ public class SettingsRenderer
         var bufferWorkAmount = dd.WorkAmount.ToString();
         Widgets.TextFieldNumeric(tableData.GetFieldRect(1, rowIdx).Replace_Width(numericInputWidth),
             ref dd.WorkAmount, ref bufferWorkAmount, workAmountMin, workAmountMax);
-        var count = (int)Widgets.HorizontalSlider(GetSliderField(1, rowIdx, tableData, numericInputWidth),
+        var count = (int)Widgets.HorizontalSlider(getSliderField(1, rowIdx, tableData, numericInputWidth),
             dd.WorkAmount, workAmountMin, workAmountMax);
         dd.WorkAmount = count;
 
@@ -72,7 +72,7 @@ public class SettingsRenderer
         var bufferYieldAmount = dd.YieldAmount.ToString();
         Widgets.TextFieldNumeric(tableData.GetFieldRect(2, rowIdx).Replace_Width(numericInputWidth),
             ref dd.YieldAmount, ref bufferYieldAmount, yieldAmountMin, dd.MaxYieldAmount);
-        var countYield = (int)Widgets.HorizontalSlider(GetSliderField(2, rowIdx, tableData, numericInputWidth),
+        var countYield = (int)Widgets.HorizontalSlider(getSliderField(2, rowIdx, tableData, numericInputWidth),
             dd.YieldAmount, yieldAmountMin, dd.MaxYieldAmount);
         dd.YieldAmount = countYield;
 
@@ -95,14 +95,14 @@ public class SettingsRenderer
         var resetDrillableBtnRect = new Rect(removeDrillableBtnRect.xMax, addDrillableBtnRect.y,
             addDrillableBtnRect.width, addDrillableBtnRect.height);
 
-        CreateAndAddDrillableButton(addDrillableBtnRect, settings);
-        CreateRemoveDrillableButton(removeDrillableBtnRect, ref tableData, settings);
-        CreateResetDrillableButton(resetDrillableBtnRect, ref tableData, settings);
+        createAndAddDrillableButton(addDrillableBtnRect, settings);
+        createRemoveDrillableButton(removeDrillableBtnRect, ref tableData, settings);
+        createResetDrillableButton(resetDrillableBtnRect, ref tableData, settings);
 
         return addDrillableBtnRect.yMax;
     }
 
-    private static void CreateAndAddDrillableButton(Rect inRect, SettingsData settings)
+    private static void createAndAddDrillableButton(Rect inRect, SettingsData settings)
     {
         if (!Widgets.ButtonText(inRect, "SEPD_AddDrillable".Translate().CapitalizeFirst(),
                 active: Mineables.AllMineables.Except(settings.Drillables.Values.Select(d => d.ThingDefToDrill)).Any()))
@@ -120,7 +120,7 @@ public class SettingsRenderer
                 .ToList()));
     }
 
-    private static void CreateRemoveDrillableButton(Rect inRect, ref TableData tableData, SettingsData settings)
+    private static void createRemoveDrillableButton(Rect inRect, ref TableData tableData, SettingsData settings)
     {
         if (!Widgets.ButtonText(inRect, "SEPD_RemoveDrillable".Translate().CapitalizeFirst(),
                 active: settings.Drillables.Any()))
@@ -136,7 +136,7 @@ public class SettingsRenderer
         tableData.Rows.Remove(tableData.Rows.Last());
     }
 
-    private static void CreateResetDrillableButton(Rect inRect, ref TableData tableData, SettingsData settings)
+    private static void createResetDrillableButton(Rect inRect, ref TableData tableData, SettingsData settings)
     {
         if (!Widgets.ButtonText(inRect, "SEPD_ResetDrillables".Translate().CapitalizeFirst()))
         {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: drill items from the inner planet -->
+  <DoBillsPlanetaryMine.label>drill items from the inner planet</DoBillsPlanetaryMine.label>
+  <!-- EN: mining -->
+  <DoBillsPlanetaryMine.gerund>mining</DoBillsPlanetaryMine.gerund>
+  <!-- EN: mine -->
+  <DoBillsPlanetaryMine.verb>mine</DoBillsPlanetaryMine.verb>
+</LanguageData>

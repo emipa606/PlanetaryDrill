@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: planetary drilling -->
+  <PlanetaryDrilling.label>planetary drilling</PlanetaryDrilling.label>
+  <!-- EN: Enables the construction of Planetary Drills. -->
+  <PlanetaryDrilling.description>Enables the construction of Planetary Drills.</PlanetaryDrilling.description>
+</LanguageData>

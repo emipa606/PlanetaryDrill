@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: planetary drill -->
+  <SE_PlanetaryDrill.label>planetary drill</SE_PlanetaryDrill.label>
+  <!-- EN: Drill out resources from the inner planet. Does NOT create infestations and is not affected by the mining skill of the colonist operating it. This drill is affected by colonist and robot skills. -->
+  <SE_PlanetaryDrill.description>Drill out resources from the inner planet. Does NOT create infestations and is not affected by the mining skill of the colonist operating it. This drill is affected by colonist and robot skills.</SE_PlanetaryDrill.description>
+</LanguageData>
